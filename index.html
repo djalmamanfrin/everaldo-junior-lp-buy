@@ -363,14 +363,38 @@
                                     <h1 class="fw-bolder text-primary">Entrar em contato</h1>
                                     <p class="lead fw-normal text-muted mb-0">Quer conhecer o jeito RE/MAX de vender?</p>
                                 </div>
-                                <!-- * * * * * * * * * * * * * * *-->
-                                <!-- * * SB Forms Contact Form * *-->
-                                <!-- * * * * * * * * * * * * * * *-->
-                                <!-- This form is pre-integrated with SB Forms.-->
-                                <!-- To make this form functional, sign up at-->
-                                <!-- https://startbootstrap.com/solution/contact-forms-->
-                                <!-- to get an API token!-->
-                                <form name="contact-me" action="/thankyou.html" method="POST" data-netlify="true">
+                                <form
+                                        name="contact"
+                                        method="POST"
+                                        netlify-honeypot="bot-field"
+                                        data-netlify="true"
+                                >
+                                    <p class="hidden">
+                                        <label>
+                                            Don’t fill this out if you’re human: <input name="bot-field" />
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            Email: <input type="text" name="email" />
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            Message: <textarea name="message"></textarea>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <button type="submit">Send</button>
+                                    </p>
+                                </form>
+                                <form name="contact-me" action="/thankyou.html" method="POST"
+                                      netlify-honeypot="bot-field" data-netlify="true">
+                                    <p class="hidden">
+                                        <label>
+                                            Don’t fill this out if you’re human: <input name="bot-field" />
+                                        </label>
+                                    </p>
                                     <!-- Name input-->
                                     <div class="form-floating mb-3">
                                         <input class="form-control" id="name" type="text"
