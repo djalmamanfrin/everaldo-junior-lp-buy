@@ -908,9 +908,12 @@ progress {
   --bs-gutter-y: 3rem;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 576px) {
   .col-sm {
-    flex: 1 0 0%;
+    flex: 100%;
+  }
+  .display-sm-3 {
+    font-size: calc(1.210rem + 2.7vw);
   }
   .row-cols-sm-auto > * {
     flex: 0 0 auto;
@@ -1946,6 +1949,11 @@ progress {
   -webkit-overflow-scrolling: touch;
 }
 
+@media (max-width: 310px) {
+  .d-ssm-none {
+    display: none;
+  }
+}
 @media (max-width: 575.98px) {
   .table-responsive-sm {
     overflow-x: auto;
@@ -11649,7 +11657,7 @@ html {
 
 .profile {
   position: relative;
-  height: 75vw;
+  height: 70vw;
   width: 75vw;
   border-radius: 5vw;
   margin-top: 5vw;
@@ -11703,7 +11711,7 @@ html {
 
 @media (min-width: 576px) {
   .profile {
-    height: 60vw;
+    height: 55vw;
     width: 60vw;
   }
   .profile .profile-img {
@@ -11728,7 +11736,7 @@ html {
 }
 @media (min-width: 768px) {
   .profile {
-    height: 50vw;
+    height: 46vw;
     width: 50vw;
   }
   .profile .profile-img {
@@ -11753,7 +11761,7 @@ html {
 }
 @media (min-width: 992px) {
   .profile {
-    height: 40vw;
+    height: 38vw;
     width: 40vw;
   }
   .profile .profile-img {
