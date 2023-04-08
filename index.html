@@ -377,21 +377,23 @@
                                     <!-- Name input-->
                                     <div class="form-floating mb-3">
                                         <input class="form-control" id="name" name="fullname" type="text"
-                                               placeholder="Nome completo..."/>
+                                               placeholder="Nome completo..."
+                                               pattern="^[a-zA-Z]{4,}\s(?:[a-zA-Z]+){0,2}$"
+                                               title="Informe Nome e Sobrenome!"
+                                               required/>
                                         <label for="name"> Nome Completo </label>
-                                        <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                                     </div>
                                     <!-- Email address input-->
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="whats" name="whats" type="text"
-                                               minlength="11" maxlength="11" size="11"
-                                               placeholder="(41) 9 1234-5678"
-                                               data-sb-validations="required,whats" />
+                                        <input class="form-control" id="whats" name="whats" type="tel"
+                                               autocomplete="off" inputmode="decimal"
+                                               pattern="^\(41\)?(\s+)?[0-9]{5}-?[0-9]{4}$"
+                                               title="Padrão esperado: (41) xxxxx-xxxx"
+                                               data-sb-validations="required,whats" required/>
                                         <label for="whats"> Whats App </label>
-                                        <div class="invalid-feedback" data-sb-feedback="whats:required">An whats is required.</div>
                                     </div>
                                    <div class="d-grid">
-                                        <button class="btn btn-primary btn-lg" type="submit">
+                                        <button id="send-contact" class="btn btn-primary btn-lg" type="submit">
                                             Enviar
                                         </button>
                                     </div>
@@ -413,6 +415,7 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
+        <script src="js/mask.class.js"></script>
         <script src="js/scripts.js"></script>
     </body>
 </html>
