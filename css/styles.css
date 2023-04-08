@@ -8487,6 +8487,9 @@ input:valid ~ .form-check-label, .input.is-valid ~ .form-check-label {
 }
 
 @media (max-width: 576px) {
+  .fs-sm-1 {
+    font-size: calc(1.325rem + 0.9vw) !important;
+  }
   .float-sm-start {
     float: left !important;
   }
