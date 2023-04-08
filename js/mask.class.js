@@ -1,7 +1,7 @@
 class Masks {
     input = {};
     masks = {
-        whatsapp: { mask: "(99) 9999-9999" },
+        whatsapp: { mask: "(99) 99999-9999" },
         sms: { mask: "+99 (99) 9 9999-9999" },
         code: { mask: "9-9-9-9" },
         cpf: { mask: "999.999.999-99" }
