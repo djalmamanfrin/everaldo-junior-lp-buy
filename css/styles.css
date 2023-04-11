@@ -624,7 +624,9 @@ progress {
 }
 
 .img-contact-me {
-  background-image: url("../assets/img-contact-me.jpeg");
+  background-image: url("../assets/img-contact-me.webp");
+  max-width: 100%;
+  height: auto;
 }
 
 .figure {
